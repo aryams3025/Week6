@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300;400;500;700;900&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+
+
+}
+.main{
+    background-image: url('assets/bck1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100vh;
+}
+.center-div{
+    padding-top: 10%;
+}
+.btn.btn-success{
+    padding: .4em 2em;
+}
+.b1{
+  margin-top: -33px;
+} 
+
+ .b2 {
+	margin-top: 19px;
+  }
+  
+.b3{
+	margin-top: 10px;
+	font-size: 15px;
+  }
+
+
+form{
+    padding: 0 3em ;
+}
+#login.title>span{
+    font-size: .8em;
+}
+.home{
+background-color: rgb(51, 255, 0);
+}
+.admin{
+	margin-top: 50px;
+}
+/* Admin Container */
+#main {
+	text-align: center;
+  padding: 0%;
+  margin: 0%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.height{
+    height: 60px;
+  }
+.th-custom{
+	background-color:#2f2ff0 ;
+  }
+.table-custom{
+	background-color: #86f254;
+}
+
+#admin-body{
+	background: rgb(242, 243, 247);
+}
+.bg-custom-nav{
+	background-color: rgb(230, 18, 18);
+}
+.name{
+  margin-left: 10px;
+}
+.exit{
+  margin-right: 10px;
+}
+.ui {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.row {
+	display: flex;
+}
+.cell {
+	border: none;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+}
+.cell:active {
+	outline: none;
+}
+
+/*User loginpage */
+
+body.ind{
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url("/assets/bck3.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.head{
+  text-align: center;
+  padding: 5%;
+}
+.head h2{
+  color: antiquewhite;
+}
+.head h3{
+  color: whitesmoke;
+}
+.con{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 200px;
+  gap: 20px; 
+ text-align: center; 
+ align-items: center;
+}
+ul.con1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.con1 li.imag img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.txt {
+  text-align: center;
+  color: white;
+}
+.txt:hover {
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+}
+.frm{
+  text-align: center;
+}

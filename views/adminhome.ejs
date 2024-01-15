@@ -1,0 +1,90 @@
+<%-include('Header')-%>
+<body id="admin-body">
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-0  ">
+    <div class="container-fluid bg-custom-nav height">
+      <a class="navbar-brand fw-bold font-monospace text-white name" href="#"><%=locals.user?user:"USER"%></a>
+      <a href="/logout" class="text-light no-under fw-bold exit">
+      SIGN OUT </a> 
+    </div>
+</nav>
+<main class="index pt-5 bg-main">
+  <!-- <div class="container search"> -->
+
+  <div class="option d-flex align-items-center justify-content-around ">
+      <form action="/search" method="post">
+        <div class="input-group">
+          <div class="form-outline d-flex p-3">
+            <input type="search" class="form-control " name="search" placeholder="Search">
+                <button id="search-button" type="submit" class="btn btn-primary bg-custom-nav mx-2" style="background-color: rgba(9,9,121,1);">
+                  
+                  <lord-icon
+                  src="https://cdn.lordicon.com/rlizirgt.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:25px;height:25px">
+              </lord-icon>
+                </button>
+          </div>
+          
+        </div>
+      </form>
+      <a href="/add"><lord-icon
+        src="https://cdn.lordicon.com/mrdiiocb.json"
+        trigger="hover"
+        colors="primary:#090979"
+        style="width:40px;height:40px">
+    </lord-icon></a>
+  </div>
+<!-- </div> -->
+  
+
+  <table class="table table-info container table-bordered my-0 mx-auto">
+      <thead>
+
+          <tr>
+              <th class="table-primary" scope="col">No.</th>
+              <th class="table-primary" scope="col">Name</th>
+              <th class="table-primary" scope="col">Email</th>
+              <th class="table-primary" scope="col">Edit</th>
+              <th class="table-primary" scope="col">Delete</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% userdata.forEach((data)=>{ %>
+              <tr>
+                  <td>
+
+                      <%=++n%>
+                  </td>
+                  <td>
+                      <%=data.name%>
+                  </td>
+                  <td>
+                      <%=data.email%>
+                  </td>
+                  <td>
+                      <a href="/edit/<%-data.id%>" class="text-white">
+                          <lord-icon src="https://cdn.lordicon.com/qtqvorle.json" style="width: 30px;height:30px"
+                              trigger="hover" delay="2000"
+                              colors="outline:#121331,primary:#646e78,secondary:#ebe6ef,tertiary:#4cb4fd"
+                              style="width:250px;height:250px">
+                          </lord-icon>
+                      </a>
+                  </td>
+                  <td>
+                      <a href="/delete/<%-data._id%>" class="text-white"
+                          onclick="return confirm('Do you want to Remove <%-data.name%> ?')">
+                          <lord-icon src="https://cdn.lordicon.com/exkbusmy.json" style="width: 30px;height:30px"
+                              trigger="hover" delay="2000"
+                              colors="outline:#121331,primary:#646e78,secondary:#4bb3fd,tertiary:#ebe6ef"
+                              style="width:250px;height:250px">
+                          </lord-icon>
+                          </i></a>
+                  </td>
+              </tr>
+              <% }) %>
+  </table>
+
+</main>
+
+<%-include('footer')-%>
